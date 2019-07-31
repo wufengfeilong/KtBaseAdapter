@@ -1,15 +1,15 @@
 # KtBaseAdapter
 
 #### 介绍
-Kotlin封装的Recyclerview的adapter
+Kotlin封装的Recyclerview的通用adapter
 
-#### 软件架构
-软件架构说明
+#### 软件版本
+[![](https://www.jitpack.io/v/com.gitee.lohas_zfw/KtBaseAdapter.svg)](https://www.jitpack.io/#com.gitee.lohas_zfw/KtBaseAdapter)
 
 
 #### 安装教程
 
-1. xxxx
+1.
 2. xxxx
 3. xxxx
 
