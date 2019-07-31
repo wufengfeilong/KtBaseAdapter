@@ -4,7 +4,8 @@
 Kotlin封装的Recyclerview的通用adapter
 
 #### 软件版本
-[![](https://www.jitpack.io/v/com.gitee.lohas_zfw/KtBaseAdapter.svg)](https://www.jitpack.io/#com.gitee.lohas_zfw/KtBaseAdapter)
+[![](https://www.jitpack.io/v/wufengfeilong/KtBaseAdapter.svg)](https://www.jitpack.io/#wufengfeilong/KtBaseAdapter)
+
 
 
 #### 安装教程
