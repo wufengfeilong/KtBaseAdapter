@@ -32,7 +32,26 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.databinding:databinding-runtime:3.2.1'
 }
 repositories {
     mavenCentral()
 }
+
+//def SDK_BASENAME = "TestSdk";
+//def SDK_VERSION = "_V1.0";
+//def sdkDestinationPath = "build";
+//def zipFile = file('build/intermediates/packaged-classes/release/classes.jar')
+//
+//task deleteBuild(type: Delete) {
+//    delete sdkDestinationPath + SDK_BASENAME + SDK_VERSION + ".jar"
+//}
+//
+//task makeJar(type: Jar) {
+//    from zipTree(zipFile)
+//    from fileTree(dir: 'src/main',includes: ['res/**'])
+//    baseName = SDK_BASENAME + SDK_VERSION
+//    destinationDir = file(sdkDestinationPath)
+//}
+//
+//makeJar.dependsOn(deleteBuild, build)
