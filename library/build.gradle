@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'com.github.dcendents.android-maven'
 //group = 'com.gitee.lohas_zfw'
 group = 'com.github.wufengfeilong'
@@ -28,7 +29,6 @@ android {
         enabled = true
     }
 }
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
