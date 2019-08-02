@@ -1,6 +1,5 @@
 package com.lohas.library
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,17 +10,15 @@ import com.lohas.library.KtBaseAdapter.KtViewHolder
 /**
  * Created by zfw on 2019/7/30 15:15
  */
-abstract class KtBaseAdapter<T>: Adapter<KtViewHolder> {
+open class KtBaseAdapter<T>: Adapter<KtViewHolder> {
 
 
     private var mList: List<T>? = null
-    var mContext: Context? = null
     private var mLayoutId:Int? = null
     var itemClick : ItemClick ?= null
 
-    constructor(mList: List<T>?, mContext: Context?, mLayoutId: Int?) {
+    constructor(mList: List<T>?, mLayoutId: Int?) {
         this.mList = mList
-        this.mContext = mContext
         this.mLayoutId = mLayoutId
     }
 
@@ -31,14 +28,14 @@ abstract class KtBaseAdapter<T>: Adapter<KtViewHolder> {
     fun setItemClickListener(itemClick : ItemClick){
         this.itemClick = itemClick
     }
-    fun updateData(items :  List<T>){
+    fun updateData(items :  ArrayList<T>?){
         this.mList = items
         notifyDataSetChanged()
     }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KtViewHolder {
-        val v = LayoutInflater.from(mContext).inflate(this!!.mLayoutId!!, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(this!!.mLayoutId!!, parent, false)
         return KtViewHolder(v)
     }
 
@@ -46,12 +43,14 @@ abstract class KtBaseAdapter<T>: Adapter<KtViewHolder> {
         val item = mList!![position]
         // item点击事件
         holder.itemView.setOnClickListener {
-            itemClick!!.OnItemClick(holder.itemView, position)
+            itemClick?.OnItemClick(holder.itemView, position)
         }
-        convert(holder, item)
+        convert(holder.itemView, item)
     }
 
-    abstract fun convert(holder: KtViewHolder, item: T)
+    open fun convert(itemView : View?, item: T){
+
+    }
 
     override fun getItemCount(): Int = mList!!.size
 

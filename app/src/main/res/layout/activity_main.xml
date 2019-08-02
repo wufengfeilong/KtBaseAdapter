@@ -11,9 +11,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!"
+            android:onClick="jumpDb"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:id="@+id/textView2"/>
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/textView2" tools:ignore="OnClick"/>
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv"
             android:layout_width="0dp"
