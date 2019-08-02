@@ -20,7 +20,8 @@ class MainDBActivity : AppCompatActivity() {
         getData()
 
         db_rv.layoutManager = LinearLayoutManager(this)
-        val mAdapter = MyAdapter(mList, R.layout.db_list_item,BR.userInfo)
+//        val mAdapter = MyAdapter(mList, R.layout.db_list_item,BR.userInfo)
+        val mAdapter = KtDBBaseAdapter(mList, R.layout.db_list_item,BR.userInfo)
         db_rv.adapter = mAdapter
         mAdapter!!.setItemClickListener(object : KtDBBaseAdapter.ItemClick {
             override fun OnItemClick(v: View, position: Int) {

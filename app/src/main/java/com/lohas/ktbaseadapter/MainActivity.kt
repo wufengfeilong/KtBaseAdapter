@@ -67,9 +67,7 @@ class MainActivity : AppCompatActivity() {
             //⑨设置item中控件的点击事件（如果不需要可以不做这一步）
             itemView!!.button
                 .setOnClickListener { Toast.makeText(itemView.context, "click:" + item.name, Toast.LENGTH_SHORT).show() }
-
         }
-
     }
 
     fun jumpDb(v:View){
