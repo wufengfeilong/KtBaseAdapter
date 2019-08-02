@@ -36,7 +36,7 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation "androidx.core:core-ktx:1.0.2"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    kapt 'com.android.databinding:compiler:3.1.4'
+    annotationProcessor 'com.android.databinding:compiler:3.1.4'
 }
 repositories {
     mavenCentral()
