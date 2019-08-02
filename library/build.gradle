@@ -32,7 +32,9 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    implementation 'androidx.databinding:databinding-runtime:3.2.1'
+//    implementation 'androidx.databinding:databinding-runtime:3.2.1'
+//    implementation 'androidx.databinding:adapters:3.2.0-alpha11'
+//    implementation 'androidx.databinding:databinding-common:3.2.1'
 }
 repositories {
     mavenCentral()
